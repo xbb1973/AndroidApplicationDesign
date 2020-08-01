@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"
+        android:text="I am textView"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv2"
+        android:text="I am textView"
+        android:textSize="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv3"
+        android:text="I am textView"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/ic_launcher_foreground"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv4"
+        android:text="I am textView"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/ic_launcher_background"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv5"
+        android:text="I am textView"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv6"
+        android:text="I am textView"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv7"
+        android:text=" I am textView I am textView I am I am textView I am textView I am I am textView I am textView I am I am textView I am textView I am textView"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+
+</LinearLayout>
