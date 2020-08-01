@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/red"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:id="@+id/view1" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/view2"
+        android:background="@color/yellow"
+        android:layout_toLeftOf="@id/view1"
+        android:layout_alignParentBottom="false"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/linearlayout1"
+        android:background="@color/orange"
+        android:layout_below="@id/view1"
+        android:padding="15dp">
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/veiw3"
+            android:background="@color/black"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:padding="15dp"
+            android:id="@+id/RL2">
+            <View
+                android:background="@color/green"
+                android:id="@+id/view4"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                />
+            <View
+                android:background="@color/green"
+                android:id="@+id/view5"
+                android:layout_width="100dp"
+                android:layout_toRightOf="@id/view4"
+                android:layout_marginLeft="10dp"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
