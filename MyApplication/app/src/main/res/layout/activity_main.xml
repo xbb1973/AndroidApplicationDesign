@@ -25,4 +25,10 @@
         android:text="EditActivity"
         android:id="@+id/edit_text_view_activity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButtonActivity"
+        android:id="@+id/radio_button_activity"/>
+
 </LinearLayout>

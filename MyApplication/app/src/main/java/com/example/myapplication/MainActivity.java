@@ -6,46 +6,72 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mTextViewActivity, mButtonActivit, mEditTextViewActivity;
+    private Button mTextViewActivity, mButtonActivit, mEditTextActivity, mRadioButtonActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bindViewById();
+        setOnClickListener();
+    }
+
+    private void bindViewById() {
         mTextViewActivity = findViewById(R.id.text_view_activity);
-        mTextViewActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // jump to TextViewActivity
-                Intent intent = new Intent(MainActivity.this,
-                        TextViewActivity.class);
-                startActivity(intent);
-            }
-        });
-
         mButtonActivit = findViewById(R.id.button_activity);
-        mButtonActivit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // jump to ButtonActivity
-                Intent intent = new Intent(MainActivity.this,
-                        ButtonActivity.class);
-                startActivity(intent);
-            }
-        });
+        mEditTextActivity = findViewById(R.id.edit_text_view_activity);
+        mRadioButtonActivity = findViewById(R.id.radio_button_activity);
+    }
 
-        mEditTextViewActivity = findViewById(R.id.edit_text_view_activity);
-        mEditTextViewActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // jump to ButtonActivity
-                Intent intent = new Intent(MainActivity.this,
-                        EditTextViewActivity.class);
-                startActivity(intent);
+    private void setOnClickListener() {
+        OnClick onClick = new OnClick();
+        mTextViewActivity.setOnClickListener(onClick);
+        mButtonActivit.setOnClickListener(onClick);
+        mEditTextActivity.setOnClickListener(onClick);
+        mRadioButtonActivity.setOnClickListener(onClick);
+    }
+
+    private class OnClick implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            StringBuffer btnName = new StringBuffer();
+
+            Intent intent = new Intent();
+            switch (view.getId()) {
+                case R.id.text_view_activity:
+                    btnName.append("button_activity");
+                    // jump to ButtonActivity
+                    intent = new Intent(MainActivity.this,
+                            TextViewActivity.class);
+                    break;
+                case R.id.button_activity:
+                    btnName.append("button_activity");
+                    // jump to ButtonActivity
+                    intent = new Intent(MainActivity.this,
+                            ButtonActivity.class);
+                    break;
+                case R.id.edit_text_view_activity:
+                    btnName.append("edit_text_view_activity");
+                    // jump to ButtonActivity
+                    intent = new Intent(MainActivity.this,
+                            EditTextViewActivity.class);
+                    break;
+                case R.id.radio_button_activity:
+                    btnName.append("radio_button_activity");
+                    // jump to ButtonActivity
+                    intent = new Intent(MainActivity.this,
+                            RadioButtonActivity.class);
+                    break;
+                default:
+                    btnName.append("btn unknow");
+                    break;
             }
-        });
+            Toast.makeText(MainActivity.this, btnName.toString() + "onclick status", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        }
     }
 }
