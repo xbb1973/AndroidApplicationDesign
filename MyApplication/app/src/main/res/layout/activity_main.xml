@@ -37,4 +37,10 @@
         android:text="CheckBoxActivity"
         android:id="@+id/check_box_activity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ImageViewActivity"
+        android:id="@+id/image_view_activity"/>
+
 </LinearLayout>

@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button mTextViewActivity, mButtonActivit, mEditTextActivity;
-    private Button mRadioButtonActivity, mCheckBoxActivity;
+    private Button mRadioButtonActivity, mCheckBoxActivity, mImageViewActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mEditTextActivity = findViewById(R.id.edit_text_view_activity);
         mRadioButtonActivity = findViewById(R.id.radio_button_activity);
         mCheckBoxActivity = findViewById(R.id.check_box_activity);
+        mImageViewActivity = findViewById(R.id.image_view_activity);
     }
 
     private void setOnClickListener() {
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mEditTextActivity.setOnClickListener(onClick);
         mRadioButtonActivity.setOnClickListener(onClick);
         mCheckBoxActivity.setOnClickListener(onClick);
+        mImageViewActivity.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
                     // jump to ButtonActivity
                     intent = new Intent(MainActivity.this,
                             CheckBoxActivity.class);
+                    break;
+                case R.id.image_view_activity:
+                    btnName.append("check box activity");
+                    // jump to ButtonActivity
+                    intent = new Intent(MainActivity.this,
+                            ImageViewActivity.class);
                     break;
                 default:
                     btnName.append("btn unknow");
