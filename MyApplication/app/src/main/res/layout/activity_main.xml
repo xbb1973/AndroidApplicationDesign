@@ -31,4 +31,10 @@
         android:text="RadioButtonActivity"
         android:id="@+id/radio_button_activity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBoxActivity"
+        android:id="@+id/check_box_activity"/>
+
 </LinearLayout>
