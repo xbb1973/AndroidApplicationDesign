@@ -43,4 +43,28 @@
         android:text="ImageViewActivity"
         android:id="@+id/image_view_activity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListViewActivity"
+        android:id="@+id/list_view_activity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GridViewActivity"
+        android:id="@+id/grid_view_activity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScrollViewActivity"
+        android:id="@+id/scroll_view_activity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerViewActivity"
+        android:id="@+id/recycler_view_activity"/>
+
 </LinearLayout>
